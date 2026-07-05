@@ -48,3 +48,22 @@ fun PreviewEjemploCard() {
     EjemploCard()
 }
 
+@Composable
+fun EjemploSwitch() {
+    var activado by remember { mutableStateOf(false) }
+    Row(
+        modifier = Modifier.padding(16.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Text(text = if (activado) "Activado" else "Desactivado")
+        Spacer(modifier = Modifier.width(8.dp))
+        Switch(checked = activado, onCheckedChange = { activado = it })
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun PreviewEjemploSwitch() {
+    EjemploSwitch()
+}
+
