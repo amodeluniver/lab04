@@ -12,6 +12,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.lab04.ui.theme.Lab04Theme
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.ui.graphics.Color
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -65,5 +68,26 @@ fun EjemploSwitch() {
 @Composable
 fun PreviewEjemploSwitch() {
     EjemploSwitch()
+}
+
+@Composable
+fun BotonPersonalizado() {
+    Button(
+        onClick = { /* Acción de ejemplo */ },
+        colors = ButtonDefaults.buttonColors(
+            containerColor = Color(0xFF6200EE),
+            contentColor = Color.White
+        ),
+        shape = RoundedCornerShape(12.dp),
+        modifier = Modifier.padding(16.dp)
+    ) {
+        Text(text = "Botón mejorado", fontSize = 16.sp)
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun PreviewBotonPersonalizado() {
+    BotonPersonalizado()
 }
 
