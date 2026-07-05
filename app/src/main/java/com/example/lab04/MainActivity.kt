@@ -31,17 +31,20 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
+fun EjemploCard() {
+    Card(
+        modifier = Modifier.padding(16.dp)
+    ) {
+        Text(
+            text = "Contenido de la tarjeta",
+            modifier = Modifier.padding(16.dp)
+        )
+    }
 }
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
-    Lab04Theme {
-        Greeting("Android")
-    }
+fun PreviewEjemploCard() {
+    EjemploCard()
 }
+
