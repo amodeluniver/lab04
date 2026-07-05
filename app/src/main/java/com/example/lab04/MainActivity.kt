@@ -73,15 +73,11 @@ fun PreviewEjemploSwitch() {
 @Composable
 fun BotonPersonalizado() {
     Button(
-        onClick = { /* Acción de ejemplo */ },
-        colors = ButtonDefaults.buttonColors(
-            containerColor = Color(0xFF6200EE),
-            contentColor = Color.White
-        ),
-        shape = RoundedCornerShape(12.dp),
-        modifier = Modifier.padding(16.dp)
+        onClick = {},
+        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF6200EE)),
+        shape = RoundedCornerShape(12.dp)
     ) {
-        Text(text = "Botón mejorado", fontSize = 16.sp)
+        Text("Botón mejorado", fontSize = 16.sp)
     }
 }
 
